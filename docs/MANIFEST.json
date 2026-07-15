@@ -1,0 +1,15 @@
+{
+  "$schema": "schemas/docs-manifest.schema.json",
+  "schema_version": "project-docs-manifest/v1",
+  "canonical": {
+    "agents": "AGENTS.md",
+    "board": "BOARD.md",
+    "context": "CONTEXT.md",
+    "state": "STATE.md",
+    "docs_index": "docs/README.md",
+    "manifest_schema": "docs/schemas/docs-manifest.schema.json"
+  },
+  "categories": {
+    "schemas": "docs/schemas"
+  }
+}

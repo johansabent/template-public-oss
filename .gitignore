@@ -1,0 +1,24 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Agent-local overrides
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# JavaScript and build output
+node_modules/
+build/
+dist/
+coverage/
+
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+*.swp

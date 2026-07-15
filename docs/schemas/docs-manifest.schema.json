@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:johansabent:schemas:project-docs-manifest:v1",
+  "title": "Project documentation manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "canonical", "categories"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "project-docs-manifest/v1"
+    },
+    "canonical": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/$defs/repositoryPath"
+      }
+    },
+    "categories": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "allOf": [
+          {"$ref": "#/$defs/repositoryPath"},
+          {"pattern": "^docs/[^/]+$"}
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "repositoryPath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\).+$"
+    }
+  }
+}

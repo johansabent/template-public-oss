@@ -1,0 +1,20 @@
+schema_version = "codex-project-onboarding/v1"
+mode = "template"
+template_repository = "johansabent/template-public-oss"
+project = "template-public-oss"
+context_boundary = "personal"
+intended_node_type = "personal-project"
+workspace = "template-public-oss"
+taxonomy_registration = "deferred"
+shared_manifest = ".agents/onboarding.toml"
+git_required = true
+wsl_required = false
+
+[capability_policy]
+browser = "approval-required"
+deploy = "approval-required"
+production = "approval-required"
+trackers = "approval-required"
+plugins = "approval-required"
+mcp_servers = "approval-required"
+account_connectors = "approval-required"

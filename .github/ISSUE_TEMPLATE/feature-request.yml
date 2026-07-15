@@ -1,0 +1,34 @@
+name: Feature request
+description: Propose a focused improvement grounded in a user or maintainer need.
+title: "feature: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Who is affected, what are they trying to do, and what blocks them?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe observable success without prescribing unnecessary implementation detail.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Note current workarounds or simpler options.
+    validations:
+      required: false
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints and risk
+      description: Include compatibility, security, migration, or operational constraints.
+    validations:
+      required: false

@@ -1,0 +1,48 @@
+schema_version = "agent-project-onboarding/v1"
+mode = "template"
+template_repository = "johansabent/template-public-oss"
+
+[identity]
+project = "template-public-oss"
+owner = "johansabent"
+status = "template"
+
+[taxonomy]
+intended_node_type = "personal-project"
+intended_context_boundary = "personal"
+intended_workspace = "template-public-oss"
+registration = "deferred"
+node_id = ""
+parent_id = ""
+
+[accounts]
+github = "johansabent/template-public-oss"
+notes = "Verify the GitHub identity before writes. Configure every external account or workspace explicitly."
+
+[project_docs]
+agents_doc = "AGENTS.md"
+board_doc = "BOARD.md"
+context_doc = "CONTEXT.md"
+state_doc = "STATE.md"
+manifest = "docs/MANIFEST.json"
+
+[capability_policy]
+routing = "project-local"
+entrypoints = []
+account_connectors = "approval-required"
+notes = "Resolve optional specialist modules from the contributor's live environment. No private host module is required."
+
+[capabilities]
+browser = false
+wsl = false
+deploy = false
+production = false
+trackers = false
+plugins = false
+mcp_servers = false
+account_connectors = false
+
+[tool_overlays]
+shared = ".agents"
+codex = ".codex"
+claude = ".claude"
